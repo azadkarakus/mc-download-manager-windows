@@ -4,3 +4,4 @@ publish/
 src-mac/
 *.user
 .vs/
+dist/

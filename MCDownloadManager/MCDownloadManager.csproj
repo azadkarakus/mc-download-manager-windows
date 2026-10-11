@@ -12,10 +12,17 @@
     <AssemblyName>MCDownloadManager</AssemblyName>
     <RootNamespace>MCDM</RootNamespace>
     <Product>MC Download Manager</Product>
-    <Version>1.2.0</Version>
+    <Version>1.0.0</Version>
+    <!-- File properties shown in Explorer; also helps antivirus reputation. -->
+    <Company>azadkarakus</Company>
+    <Description>MC Download Manager</Description>
+    <AssemblyTitle>MC Download Manager</AssemblyTitle>
+    <Copyright>Copyright (c) 2026 Mesut Çevik, azadkarakus. MIT License.</Copyright>
     <ApplicationIcon>app.ico</ApplicationIcon>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <SelfContained>true</SelfContained>
+    <!-- Only ship framework resources for the UI languages we support. -->
+    <SatelliteResourceLanguages>en;tr</SatelliteResourceLanguages>
   </PropertyGroup>
 
   <ItemGroup>

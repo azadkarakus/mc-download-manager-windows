@@ -15,7 +15,8 @@ namespace MCDM;
 /// Tiny HTTP bridge on 127.0.0.1 for the browser extensions (same API as the macOS app).
 public sealed class BridgeServer
 {
-    public const string Version = "1.2.0";
+    /// From the csproj / `dotnet publish -p:Version=` (CI passes the git tag).
+    public static readonly string Version = typeof(BridgeServer).Assembly.GetName().Version?.ToString(3) ?? "0.0.0";
 
     public bool Running { get; private set; }
     public string StatusText { get; private set; } = S.T("Not started", "Başlatılmadı");
