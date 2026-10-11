@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Fluent ThemeMode is still marked experimental -->
+    <NoWarn>$(NoWarn);WPF0001</NoWarn>
+    <AssemblyName>MCDownloadManager</AssemblyName>
+    <RootNamespace>MCDM</RootNamespace>
+    <Product>MC Download Manager</Product>
+    <Version>1.2.0</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="app.ico" />
+    <!-- Browser extension shipped next to the exe; copied to %LOCALAPPDATA% at startup for "Load unpacked". -->
+    <None Include="..\Extension\**\*" LinkBase="Extension" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
